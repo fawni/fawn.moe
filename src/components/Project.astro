@@ -17,8 +17,10 @@ const OWNER = org ? org : USERNAME;
 ---
 
 <div class="project">
-  <a href={SOURCE + "/" + OWNER + "/" + name}>{OWNER + "/"}<b>{name}</b></a>
-  {website && <a href={website} class="web">(web)</a>}
+  <a href={`${SOURCE}/${OWNER}/${name}`} target="_blank">{`${OWNER}/`}<b>{
+      name
+    }</b></a>
+  {website && <a href={website} target="_blank" class="web">(web)</a>}
   <div class="description">{description}</div>
 </div>
 

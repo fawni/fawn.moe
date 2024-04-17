@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 interface Props {
   name: string;
   url: string;
@@ -7,17 +9,17 @@ interface Props {
 const { name, url } = Astro.props;
 ---
 
-<a href={url}>
-  <img title={name + " <3"} src={"buttons/" + name + ".png"} />
+<a href={url} title={`${name}'s site`} target="_blank">
+  <Image
+    src={`/buttons/${name}.png`}
+    alt={`${name}'s button`}
+    width={88}
+    height={31}
+  />
 </a>
 
 <style lang="scss">
-a {
-  width: 88px;
-  height: 31px;
-
-  img {
-    image-rendering: pixelated;
-  }
+img {
+  image-rendering: pixelated;
 }
 </style>
