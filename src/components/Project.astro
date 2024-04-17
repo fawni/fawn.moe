@@ -7,19 +7,17 @@ interface Props {
   org?: string;
 }
 
-const { name, description, src: source = "codeberg", website, org } =
-  Astro.props;
+const { name, description, src = "codeberg", website, org } = Astro.props;
 
-const USERNAME = source === "gh" ? "fawni" : "fawn";
-const PROJECT_BASE = source === "gh"
+const USERNAME = src === "gh" ? "fawni" : "fawn";
+const SOURCE = src === "gh"
   ? "https://github.com"
   : "https://codeberg.org";
 const OWNER = org ? org : USERNAME;
 ---
 
 <div class="project">
-  <a href={PROJECT_BASE + "/" + OWNER + "/" + name}>{OWNER + "/"}<b>{name}</b
-    ></a>
+  <a href={SOURCE + "/" + OWNER + "/" + name}>{OWNER + "/"}<b>{name}</b></a>
   {website && <a href={website} class="web">(web)</a>}
   <div class="description">{description}</div>
 </div>
