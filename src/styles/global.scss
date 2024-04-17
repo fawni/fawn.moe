@@ -36,6 +36,11 @@ body {
   ); // 100% - padding - margin - border
 }
 
+::selection {
+  background-color: thorns.$accent-purple;
+  color: thorns.$fg0;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Iosevka";
 }

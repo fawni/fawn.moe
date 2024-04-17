@@ -1,0 +1,28 @@
+---
+
+---
+
+<span data-pronouns>/fɔːn/</span>
+
+<script>
+const pronouns: HTMLElement | null = document.querySelector("[data-pronouns]");
+
+pronouns?.addEventListener(
+  "click",
+  () =>
+    pronouns.innerText = pronouns?.innerText === "/fɔːn/"
+      ? "(he/him)"
+      : "/fɔːn/",
+);
+</script>
+
+<style lang="scss">
+@use "@styles/_thorns.scss";
+
+span {
+  color: thorns.$fg1;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+</style>

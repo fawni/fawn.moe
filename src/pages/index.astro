@@ -3,11 +3,12 @@ import Layout from "@layouts/Page.astro";
 
 import Friend from "@components/Friend.astro";
 import Project from "@components/Project.astro";
+import Pronouns from "@components/Pronouns.astro";
 ---
 
 <Layout>
   <section>
-    <h1 id="intro">~fawn<span class="pronouns">(he/him)</span></h1>
+    <h1 id="intro">~fawn <Pronouns /></h1>
     <p>
       Hi, i'm fawn! i'm a self-taught software developer with a passion for open
       source software. My favorite flowers are tulips 🌷.
@@ -92,15 +93,6 @@ import Project from "@components/Project.astro";
 </Layout>
 
 <style lang="scss">
-@use "@styles/_thorns.scss";
-
-.pronouns {
-  padding-left: 0.6rem;
-  color: thorns.$fg1;
-  font-size: 1rem;
-  font-weight: 400;
-}
-
 .projects {
   display: flex;
   flex-direction: row;
