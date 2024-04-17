@@ -1,0 +1,110 @@
+---
+import Layout from "@layouts/Page.astro";
+
+import Friend from "@components/Friend.astro";
+import Project from "@components/Project.astro";
+---
+
+<Layout>
+  <section>
+    <h1 id="intro">~fawn<span class="pronouns">(he/him)</span></h1>
+    <p>
+      Hi, i'm fawn! i'm a self-taught software developer with a passion for open
+      source software. My favorite flowers are tulips 🌷.
+    </p>
+  </section>
+
+  <section>
+    <h2 id="links">links</h2>
+    <p>Where to catch a wild fawn!</p>
+    <ul>
+      <li>
+        Codeberg: <a href="https://codeberg.org/fawn">@fawn</a>
+      </li>
+      <li>
+        Github: <a href="https://github.com/fawni">@fawni</a>
+      </li>
+      <li>
+        Sourcehut: <a href="https://git.sr.ht/~obscurity">~obscurity</a>
+      </li>
+      <li>
+        Last.fm: <a href="https://www.last.fm/user/aokiare">aokiare</a>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 id="projects">projects</h2>
+    <p>
+      My personal projects are scattered all over codeberg and github. Sometimes
+      i like to contribute to other people's projects too!<br />
+      I love writing tiny pretty programs and re-inventing the wheel :3
+    </p>
+    <div class="projects">
+      <Project
+        name="faye"
+        description="a pretty little lisp! my favorite project ♡ we spent a lot of time making it really good"
+        website="https://faye.fawn.moe"
+      />
+      <Project
+        name="tamako"
+        description="cozy minimalistic anonymous whispers website and a pretty little tui client"
+        website="https://tamako.fawn.moe"
+      />
+      <Project
+        name="def"
+        description="terminal dictionary navigator with a colorful output"
+        src="gh"
+      />
+      <Project
+        name="asunder"
+        description="totp authenticator in a pretty tui"
+        src="gh"
+      />
+      <Project
+        name="macaron"
+        description="simple minimalistic toast notifications"
+        website="https://twink.codeberg.page/macaron"
+        org="twink"
+      />
+      <Project
+        name="april"
+        description="file hosting service (pomf clone)"
+      />
+    </div>
+  </section>
+
+  <section>
+    <h2 id="friends">friends</h2>
+    <div class="buttons">
+      <Friend name="fawn" url="https://fawn.moe" />
+      <Friend name="ven" url="https://vendicated.dev" />
+      <Friend name="sami" url="https://ssalggnikool.xyz" />
+      <Friend name="n4rc1ssus" url="https://n4rc1ssus.is-a.dev/" />
+    </div>
+  </section>
+</Layout>
+
+<style lang="scss">
+@use "@styles/_thorns.scss";
+
+.pronouns {
+  padding-left: 0.6rem;
+  color: thorns.$fg1;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.projects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1200px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+</style>

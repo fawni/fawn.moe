@@ -1,0 +1,43 @@
+---
+interface Props {
+  name: string;
+  description: string;
+  src?: string;
+  website?: string;
+  org?: string;
+}
+
+const { name, description, src: source = "codeberg", website, org } =
+  Astro.props;
+
+const USERNAME = source === "gh" ? "fawni" : "fawn";
+const PROJECT_BASE = source === "gh"
+  ? "https://github.com"
+  : "https://codeberg.org";
+const OWNER = org ? org : USERNAME;
+---
+
+<div class="project">
+  <a href={PROJECT_BASE + "/" + OWNER + "/" + name}>{OWNER + "/"}<b>{name}</b
+    ></a>
+  {website && <a href={website} class="web">(web)</a>}
+  <div class="description">{description}</div>
+</div>
+
+<style lang="scss">
+@use "@styles/_thorns.scss";
+
+.project {
+  padding: 0 2ch 1rem;
+  width: 48ch;
+}
+
+.web {
+  font-size: smaller;
+  color: thorns.$cyan;
+}
+
+.description {
+  font-family: "Nunito", "Sarasa Mono J";
+}
+</style>

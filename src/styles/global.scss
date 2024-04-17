@@ -1,0 +1,79 @@
+@use "_thorns.scss";
+@use "sass:color";
+
+@font-face {
+  font-family: "Sarasa Mono J";
+  src: url("/fonts/sarasa.woff2") format("woff2"), url("/font/sarasa.woff2");
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("/fonts/nunito.woff2") format("woff2"), url("/font/nunito.woff2");
+}
+
+:root {
+  font-family: "Nunito", "Sarasa Mono J";
+  font-size: 1.05rem;
+}
+
+html {
+  background-image: url("assets/flowers.png");
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  color: thorns.$fg0;
+  background-color: color.adjust(thorns.$bg0, $alpha: -0.02);
+  border: thorns.$accent-purple 2px solid;
+  box-shadow: 6px 6px 4px color.adjust(thorns.$bg0, $alpha: -0.3);
+
+  padding: 0.6rem 2rem;
+  margin: 20px;
+  min-height: calc(
+    100vh - 40px - 4px - 2rem
+  ); // 100% - padding - margin - border
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Sarasa Mono J";
+}
+
+h1 {
+  color: thorns.$accent-pink;
+}
+
+h2 {
+  color: thorns.$accent-purple;
+}
+
+h3 {
+  color: thorns.$cyan;
+}
+
+a {
+  color: thorns.$accent-pink;
+  text-decoration: none;
+  font-family: "Sarasa Mono J";
+
+  transition-property: opacity, text-decoration;
+  transition-duration: 0.15s;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+
+  &:hover, &:focus {
+    text-decoration: underline;
+    opacity: 0.5;
+  }
+}
+
+ul {
+  padding-left: 2rem;
+  line-height: 1.25rem;
+
+  li::marker {
+    // content: "♡ ";
+    // color: thorns.$red;
+    color: thorns.$accent-purple;
+  }
+}

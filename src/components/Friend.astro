@@ -1,0 +1,23 @@
+---
+interface Props {
+  name: string;
+  url: string;
+}
+
+const { name, url } = Astro.props;
+---
+
+<a href={url}>
+  <img title={name + " <3"} src={"buttons/" + name + ".png"} />
+</a>
+
+<style lang="scss">
+a {
+  width: 88px;
+  height: 31px;
+
+  img {
+    image-rendering: pixelated;
+  }
+}
+</style>
