@@ -24,5 +24,13 @@ span {
   font-size: 1rem;
   font-weight: 400;
   cursor: pointer;
+
+  &:hover, &focus {
+    opacity: 0.50;
+
+    transition-property: opacity;
+    transition-duration: 0.15s;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
 }
 </style>
