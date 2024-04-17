@@ -22,6 +22,22 @@ const { title = "", description = "eternally confused" } = Astro.props;
     <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
+    <link
+      rel="preload"
+      as="font"
+      href="/fonts/sarasa.woff2"
+      type="font/woff2"
+      crossorigin="anonymous"
+    >
+    <link
+      rel="preload"
+      as="font"
+      href="/fonts/nunito.woff2"
+      type="font/woff2"
+      crossorigin="anonymous"
+    >
+    <link rel="preload" as="image" href="/assets/flowers.webp">
+
     <meta name="darkreader-lock">
   </head>
   <body>
