@@ -21,7 +21,7 @@
     "typescript": "^5.4.5"
   },
   "devDependencies": {
-    "@playform/inline": "0.0.2",
+    "@playform/inline": "^0.0.2",
     "astro-compress": "Playform/AstroCompress#no-sharp"
   }
 }
