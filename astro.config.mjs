@@ -1,15 +1,11 @@
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
+import compress from "astro-compress";
+import inline from "@playform/inline";
 import { defineConfig } from "astro/config";
 
-import playformCompress from "@playform/compress";
-import playformInline from "@playform/inline";
-
+// https://astro.build/config
 export default defineConfig({
-  integrations: [
-    mdx(),
-    sitemap(),
-    playformInline(),
-    playformCompress({ images: false }),
-  ],
+  site: "https://fawn.moe",
+  integrations: [mdx(), sitemap(), inline(), compress()],
 });
