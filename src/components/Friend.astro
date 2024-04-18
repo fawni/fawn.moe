@@ -4,14 +4,15 @@ import { Image } from "astro:assets";
 interface Props {
   name: string;
   url: string;
+  ext?: string;
 }
 
-const { name, url } = Astro.props;
+const { name, url, ext = "png" } = Astro.props;
 ---
 
 <a href={url} title={`${name}'s site`} target="_blank">
   <Image
-    src={`/buttons/${name}.png`}
+    src={`/buttons/${name}.${ext}`}
     alt={`${name}'s button`}
     width={88}
     height={31}
