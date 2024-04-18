@@ -34,11 +34,11 @@ body {
   min-height: calc(
     100vh - 40px - 4px - 2rem
   ); // 100% - padding - margin - border
-}
 
-::selection {
-  background-color: thorns.$accent-purple;
-  color: thorns.$fg0;
+  ::selection {
+    background-color: thorns.$accent-purple;
+    color: thorns.$fg0;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
