@@ -1,41 +1,41 @@
 {
   "projects": [
     {
-      "owner": "fawn",
       "name": "faye",
+      "owner": "fawn",
       "description": "a pretty little lisp ♡ my favorite project! we spent a lot of time making it really good",
       "source": "https://codeberg.org/fawn/faye",
       "website": "https://faye.fawn.moe"
     },
     {
-      "owner": "fawn",
       "name": "tamako",
+      "owner": "fawn",
       "description": "cozy minimalistic anonymous whispers website and a pretty little tui client",
       "source": "https://codeberg.org/fawn/tamako",
       "website": "https://tamako.fawn.moe"
     },
     {
-      "owner": "fawni",
       "name": "def",
+      "owner": "fawni",
       "description": "terminal dictionary navigator with a colorful output",
       "source": "https://github.com/fawni/def"
     },
     {
-      "owner": "fawni",
       "name": "asunder",
+      "owner": "fawni",
       "description": "totp authenticator in a pretty tui",
       "source": "https://github.com/fawni/asunder"
     },
     {
-      "owner": "twink",
       "name": "macaron",
+      "owner": "twink",
       "description": "simple minimalistic toast notifications",
       "source": "https://codeberg.org/twink/macaron",
       "website": "https://twink.codeberg.page/macaron"
     },
     {
-      "owner": "fawn",
       "name": "april",
+      "owner": "fawn",
       "description": "file hosting service (pomf clone)",
       "source": "https://codeberg.org/fawn/april"
     }
