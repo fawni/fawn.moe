@@ -1,0 +1,48 @@
+---
+import { projects } from "@data/projects/index.json";
+---
+
+<div class="projects">
+  {
+    projects.map((project) => {
+    return (
+      <div class="project">
+        <a href={project.source} target="_blank">{`${project.owner}/`}<b>{
+            project.name
+          }</b></a>
+        {
+          project.website && (
+            <a href={project.website} target="_blank" class="web">(web)</a>
+          )
+        }
+        <div class="description">{project.description}</div>
+      </div>
+    );
+    })
+  }
+</div>
+
+<style lang="scss">
+@use "@styles/_thorns.scss";
+
+.projects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1200px;
+}
+
+.project {
+  padding: 0 2ch 1rem;
+  width: 48ch;
+}
+
+.web {
+  font-size: smaller;
+  color: thorns.$cyan;
+}
+
+.description {
+  font-family: "Nunito", "Iosevka";
+}
+</style>

@@ -2,7 +2,7 @@
 import Layout from "@layouts/Page.astro";
 
 import Friends from "@components/Friends.astro";
-import Project from "@components/Project.astro";
+import Projects from "@components/Projects.astro";
 import Pronouns from "@components/Pronouns.astro";
 ---
 
@@ -47,38 +47,7 @@ import Pronouns from "@components/Pronouns.astro";
       i like to contribute to other people's projects too!<br />
       I love writing tiny pretty programs and re-inventing the wheel :3
     </p>
-    <div class="projects">
-      <Project
-        name="faye"
-        description="a pretty little lisp! my favorite project ♡ we spent a lot of time making it really good"
-        website="https://faye.fawn.moe"
-      />
-      <Project
-        name="tamako"
-        description="cozy minimalistic anonymous whispers website and a pretty little tui client"
-        website="https://tamako.fawn.moe"
-      />
-      <Project
-        name="def"
-        description="terminal dictionary navigator with a colorful output"
-        src="gh"
-      />
-      <Project
-        name="asunder"
-        description="totp authenticator in a pretty tui"
-        src="gh"
-      />
-      <Project
-        name="macaron"
-        description="simple minimalistic toast notifications"
-        website="https://twink.codeberg.page/macaron"
-        org="twink"
-      />
-      <Project
-        name="april"
-        description="file hosting service (pomf clone)"
-      />
-    </div>
+    <Projects />
   </section>
 
   <section>
@@ -86,12 +55,3 @@ import Pronouns from "@components/Pronouns.astro";
     <Friends />
   </section>
 </Layout>
-
-<style lang="scss">
-.projects {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  max-width: 1200px;
-}
-</style>
