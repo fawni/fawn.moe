@@ -1,0 +1,29 @@
+{
+  "friends": [
+    {
+      "name": "fawn",
+      "image": "/buttons/fawn.png",
+      "url": "https://fawn.moe"
+    },
+    {
+      "name": "ruby",
+      "image": "/buttons/ruby.gif",
+      "url": "https://ruby-rain.neocities.org"
+    },
+    {
+      "name": "vee",
+      "image": "/buttons/vee.png",
+      "url": "https://vendicated.dev"
+    },
+    {
+      "name": "sami",
+      "image": "/buttons/sami.png",
+      "url": "https://ssalggnikool.xyz"
+    },
+    {
+      "name": "n4rc1ssus",
+      "image": "/buttons/n4rc1ssus.png",
+      "url": "https://n4rc1ssus.is-a.dev"
+    }
+  ]
+}

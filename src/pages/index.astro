@@ -1,7 +1,7 @@
 ---
 import Layout from "@layouts/Page.astro";
 
-import Friend from "@components/Friend.astro";
+import Friends from "@components/Friends.astro";
 import Project from "@components/Project.astro";
 import Pronouns from "@components/Pronouns.astro";
 ---
@@ -83,13 +83,7 @@ import Pronouns from "@components/Pronouns.astro";
 
   <section>
     <h2 id="friends">friends</h2>
-    <div class="buttons">
-      <Friend name="fawn" url="https://fawn.moe" />
-      <Friend name="ruby" url="https://ruby-rain.neocities.org" ext="gif" />
-      <Friend name="ven" url="https://vendicated.dev" />
-      <Friend name="sami" url="https://ssalggnikool.xyz" />
-      <Friend name="n4rc1ssus" url="https://n4rc1ssus.is-a.dev/" />
-    </div>
+    <Friends />
   </section>
 </Layout>
 
@@ -99,11 +93,5 @@ import Pronouns from "@components/Pronouns.astro";
   flex-direction: row;
   flex-wrap: wrap;
   max-width: 1200px;
-}
-
-.buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
 }
 </style>

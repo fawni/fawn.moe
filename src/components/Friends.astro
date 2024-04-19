@@ -1,0 +1,34 @@
+---
+import { Image } from "astro:assets";
+
+import { friends } from "@data/buttons/index.json";
+---
+
+<div>
+  {
+    friends.map((friend) => {
+    return (
+      <a href={friend.url} title={`${friend.name}'s site`} target="_blank">
+        <Image
+          src={friend.image}
+          alt={`${friend.name}'s button`}
+          width={88}
+          height={31}
+        />
+      </a>
+    );
+    })
+  }
+</div>
+
+<style lang="scss">
+img {
+  image-rendering: pixelated;
+}
+
+div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+</style>
