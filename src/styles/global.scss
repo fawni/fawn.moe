@@ -32,8 +32,8 @@ body {
   padding: 0.6rem 2rem;
   margin: 20px;
   min-height: calc(
-    100vh - 40px - 4px - 2rem
-  ); // 100% - padding - margin - border
+    100vh - 20px * 2 - 2px * 2 - 0.6rem * 2
+  ); // 100% - margin - border - padding
 
   ::selection {
     background-color: thorns.$accent-purple;
