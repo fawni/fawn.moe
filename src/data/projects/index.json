@@ -37,7 +37,8 @@
       "name": "april",
       "owner": "fawn",
       "description": "file hosting service (pomf clone)",
-      "source": "https://codeberg.org/fawn/april"
+      "source": "https://codeberg.org/fawn/april",
+      "website": "https://april.fawn.moe/"
     }
   ]
 }
