@@ -20,20 +20,20 @@ html {
   background-image: url("assets/flowers.webp");
 }
 
-body {
+main {
   display: flex;
   flex-direction: column;
 
   color: thorns.$fg0;
   background-color: color.adjust(thorns.$bg0, $alpha: -0.02);
   border: thorns.$accent-purple 2px solid;
-  box-shadow: 6px 6px 4px color.adjust(thorns.$bg0, $alpha: -0.3);
+  /* box-shadow: 6px 6px 4px color.adjust(thorns.$bg0, $alpha: -0.3); */
 
   padding: 0.6rem 2rem;
-  margin: 20px;
+  margin: 0 20px 20px 20px;
   min-height: calc(
-    100vh - 20px * 2 - 2px * 2 - 0.6rem * 2
-  ); // 100% - margin - border - padding
+    100vh - 20px * 2 - 2px * 2 - 0.6rem * 2 - 2rem - 10px
+  ); // 100% - margin - border - padding - header height - header margin
 
   ::selection {
     background-color: thorns.$accent-purple;
@@ -55,6 +55,10 @@ h2 {
 
 h3 {
   color: thorns.$cyan;
+}
+
+h4 {
+  color: thorns.$green;
 }
 
 a {
