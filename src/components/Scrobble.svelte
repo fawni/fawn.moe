@@ -29,10 +29,9 @@ onMount(() => {
 {#if track_name !== undefined}
   <span>
     <span class="heart">{loved === "1" ? "♥ " : "♡ "}</span>
-    <a href={track_url}>{track_name}</a>
+    <a href={track_url}>{track_name.length > 30 ? `${track_name.substring(0, 30)}⋯` : track_name}</a>
     <span>{" / "}</span>
-    <a href={artist_url}>{artist_name}</a>
-    <!-- <span>{`${track_name} / ${artist_name}`}</span> -->
+    <a href={artist_url}>{artist_name.length > 30 ? `${artist_name.substring(0, 30)}⋯` : artist_name}</a>
   </span>
 {:else}
   <span>{"..."}</span>
