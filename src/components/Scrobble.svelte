@@ -2,7 +2,7 @@
 import { onMount } from "svelte";
 import { scale } from "svelte/transition";
 
-let artist_name, artist_url, track_name, track_url, loved;
+let artist_name, artist_url, track_name, track_url, loved, np;
 
 const last_scrobble = async () => {
   const username = "aokiare";
@@ -20,6 +20,7 @@ const last_scrobble = async () => {
   artist_name = track.artist?.name;
   artist_url = track.artist?.url;
   loved = track.loved;
+  np = track["@attr"]?.nowplaying;
 };
 
 onMount(() => {
@@ -41,6 +42,7 @@ onMount(() => {
       ? `${artist_name.substring(0, 30)}⋯`
       : artist_name
     }</a>
+    <span class={np ? "active" : "inactive"}>~</span>
   </span>
 {/if}
 
@@ -57,5 +59,13 @@ a {
 
 .heart {
   color: thorns.$red;
+}
+
+.active {
+  color: thorns.$green;
+}
+
+.inactive {
+  color: thorns.$fg1;
 }
 </style>
