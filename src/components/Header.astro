@@ -2,28 +2,29 @@
 import Clock from "@components/Clock.svelte";
 import Scrobble from "@components/Scrobble.svelte";
 
-const routes = ["about", "contact"];
-
-interface Props {
-  title: string;
-}
-
-const { title } = Astro.props;
+const routes = [
+  { href: "/", text: "home" },
+  { href: "/about", text: "about" },
+  { href: "/contact", text: "contact" },
+];
 ---
 
 <header>
   <div id="header-buttons">
     <ul>
-      <li>
-        <a href="/" class={`${title ? "" : "selected"}`}>home</a>
-      </li>
       {
-        routes.map(route => (
+        routes.map(({ href, text }) => (
           <li>
             <a
-              href={`/${route}`}
-              class={`${title.substring(3) === route ? "selected" : ""}`}
-            >{`${route}`}</a>
+              href={href}
+              class={`${
+                (Astro.url.pathname.startsWith(href) && href !== "/")
+                  || Astro.url.pathname === href
+                  ? "selected"
+                  : ""
+              }`}
+              id={Astro.url.pathname}
+            >{text}</a>
           </li>
         ))
       }
@@ -116,7 +117,7 @@ a {
   height: 2rem;
   line-height: 2.2;
 
-  &:hover {
+  &:hover, &:focus {
     text-decoration: unset;
   }
 }
