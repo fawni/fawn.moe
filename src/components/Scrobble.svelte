@@ -31,11 +31,15 @@ onMount(() => {
   <span transition:scale={{}}>
     <span class="heart">{loved === "1" ? "♥ " : "♡ "}</span>
     <a href={track_url}>{
-      track_name.length > 30 ? `${track_name.substring(0, 30)}⋯` : track_name
+      track_name.length > 30
+      ? `${track_name.substring(0, 30)}⋯`
+      : track_name
     }</a>
     <span>{" / "}</span>
     <a href={artist_url}>{
-      artist_name.length > 30 ? `${artist_name.substring(0, 30)}⋯` : artist_name
+      artist_name.length > 30
+      ? `${artist_name.substring(0, 30)}⋯`
+      : artist_name
     }</a>
   </span>
 {/if}
@@ -46,7 +50,7 @@ onMount(() => {
 a {
   color: thorns.$fg0;
 
-  &:hover {
+  &:hover, &:focus {
     text-decoration: unset;
   }
 }
