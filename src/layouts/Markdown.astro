@@ -3,10 +3,9 @@ import Layout from "@layouts/Page.astro";
 
 const { title, description } = Astro.props.frontmatter;
 ---
-
-<Layout title={`/${title}`}>
-  <h1 id={title}>{title}</h1>
-  <p>{description}</p>
+<Layout title={`${title ? ` / ${title}` : ""}`}>
+  <h1 id="title">{title}</h1>
+  <p id="description">{description}</p>
 
   <slot />
 </Layout>

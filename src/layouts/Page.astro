@@ -3,6 +3,7 @@ import "normalize.css";
 import "@styles/global.scss";
 
 import Footer from "@components/Footer.astro";
+import Header from "@components/Header.astro";
 
 interface Props {
   title?: string;
@@ -28,11 +29,11 @@ const { title = "", description = "eternally confused" } = Astro.props;
     <meta name="darkreader-lock">
   </head>
   <body>
+    <Header title={title} />
     <main>
       <slot />
+      <Footer />
     </main>
-
-    <Footer />
   </body>
 </html>
 
