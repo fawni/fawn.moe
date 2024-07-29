@@ -2,12 +2,12 @@
 import { onMount } from "svelte";
 import { scale } from "svelte/transition";
 
+const username = "aokiare";
+const api_key = import.meta.env.PUBLIC_LASTFM_API_KEY;
+
 let artist_name, artist_url, track_name, track_url, loved, np;
 
 const last_scrobble = async () => {
-  const username = "aokiare";
-  const api_key = import.meta.env.PUBLIC_LASTFM_API_KEY;
-
   const res = await fetch(
     `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${username}&api_key=${api_key}&format=json&limit=1&extended=1`,
   );
