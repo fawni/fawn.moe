@@ -42,7 +42,6 @@ onMount(() => {
       ? `${artist_name.substring(0, 30)}…`
       : artist_name
     }</a>
-    <span class={np ? "active" : "inactive"}>~</span>
   </span>
 {/if}
 
@@ -59,13 +58,5 @@ a {
 
 .heart {
   color: thorns.$red;
-}
-
-.active {
-  color: thorns.$green;
-}
-
-.inactive {
-  color: thorns.$fg1;
 }
 </style>
