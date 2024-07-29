@@ -33,6 +33,7 @@ onMount(() => {
 
 <span>"{day}
   {date < 10 ? 0 : ""}{date}
+  {month}
   {hours < 10 ? 0 : ""}{hours}:{minutes < 10 ? 0 : ""}{minutes}:{
     seconds < 10 ? 0 : ""
   }{seconds}
