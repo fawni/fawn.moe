@@ -44,6 +44,7 @@ const routes = [
 </header>
 
 <style lang="scss">
+@use "sass:color";
 @use "@styles/_thorns.scss";
 
 header {
@@ -54,7 +55,7 @@ header {
   font-family: "Iosevka";
   font-size: 0.9rem;
   color: thorns.$fg0;
-  background-color: thorns.$bg0;
+  background-color: color.adjust(thorns.$bg0, $alpha: -0.02);;
   margin: 10px 20px;
 
   height: 2rem;
