@@ -18,6 +18,11 @@
 
 html {
   background-image: url("/assets/flowers.webp");
+
+  ::selection {
+    background-color: thorns.$accent-purple;
+    color: thorns.$bg0;
+  }
 }
 
 main {
@@ -34,11 +39,6 @@ main {
   min-height: calc(
     100vh - 20px * 2 - 2px * 2 - 0.6rem * 2 - 2rem - 10px
   ); // 100% - margin - border - padding - header height - header margin
-
-  ::selection {
-    background-color: thorns.$accent-purple;
-    color: thorns.$bg0;
-  }
 }
 
 h1, h2, h3, h4, h5, h6 {
