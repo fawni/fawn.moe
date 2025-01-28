@@ -1,49 +1,53 @@
-::selection {
-  background-color: #eb99a1;
-  color: #d9d8dc;
+* {
+  font-family: "Inter", sans-serif;
 }
 
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Nunito", sans-serif;
-}
+/* ::selection { */
+/*   background-color: #eb99a1; */
+/*   color: #d9d8dc; */
+/* } */
 
-li {
-  word-wrap: break-word;
-}
+/* body, */
+/* h1, */
+/* h2, */
+/* h3, */
+/* h4, */
+/* h5, */
+/* h6 { */
+/*   font-family: "Nunito", sans-serif; */
+/* } */
 
-br,
-img {
-  user-select: none;
-}
+/* li { */
+/*   word-wrap: break-word; */
+/* } */
 
-.banner img {
-  image-rendering: pixelated;
-}
+/* br, */
+/* img { */
+/*   user-select: none; */
+/* } */
 
-.banner:hover {
-  border-bottom: none;
-}
+/* .banner img { */
+/*   image-rendering: pixelated; */
+/* } */
 
-#mascot img {
-  max-width: 350px;
-  width: 45vw;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  margin-bottom: 0;
-  margin-right: 30px;
-}
+/* .banner:hover { */
+/*   border-bottom: none; */
+/* } */
 
-a:visited {
-  color: #eb99a1;
-}
+/* #mascot img { */
+/*   max-width: 350px; */
+/*   width: 45vw; */
+/*   position: fixed; */
+/*   right: 0; */
+/*   bottom: 0; */
+/*   margin-bottom: 0; */
+/*   margin-right: 30px; */
+/* } */
 
-a:visited:hover {
-  color: #da4453;
-}
+/* a:visited { */
+/*   color: #eb99a1; */
+/* } */
+
+/* a:visited:hover { */
+/*   color: #da4453; */
+/* } */
